@@ -1,29 +1,29 @@
-var nota1;
-var nota2;
-var nota3;
-var nota4;
+var n1;
+var n2;
+var n3;
+var n4;
 var resultado;
 
 function calcular(event) {
-    event.preventDefault();
-    
-    nota1 = document.getElementById('nota1').value;
-    nota2 = document.getElementById('nota2').value;
-    nota3 = document.getElementById('nota3').value;
-    nota4 = document.getElementById('nota4').value;
+  event.preventDefault();
 
-    media = (nota1 + nota2 + nota3 + nota4) /4 ;
-   
-    resultado = document.getElementById('resultado');
-    if (media < 7) {
-        resultado.innerHTML =
-            "<br/> Seu resultado foi " +
-            media.toFixed(2) +
-            "<br/> Você está reprovado";
-    } else if (media >= 7) {
-        resultado.innerHTML =
-            "<br/> Seu resultado foi " +
-            media.toFixed(2) +
-            "<br/> Você está aprovado, Parabéns";
-    }
+  n1 = document.getElementById("n1").value;
+  n2 = document.getElementById("n2").value;
+  n3 = document.getElementById("n3").value;
+  n4 = document.getElementById("n4").value;
+
+  media = (Number(n1) + Number(n2) + Number(n3) + Number(n4)) / 4;
+
+  resultado = document.getElementById("resultado");
+  if (media < 7) {
+    resultado.innerHTML =
+      "<br/> Seu resultado foi " +
+      media.toFixed(2) +
+      "<br/> Você está reprovado";
+  } else if (media >= 7) {
+    resultado.innerHTML =
+      "<br/> Seu resultado foi " +
+      media.toFixed(2) +
+      "<br/> Você está aprovado, Parabéns";
+  }
 }
